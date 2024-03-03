@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 // import connection
 const db = require("./config/connection");
 
-const prompUser = () => {
+const promptUser = () => {
 
     inquirer.prompt([{
         type: "list",
