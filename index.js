@@ -54,4 +54,12 @@ const viewAllDepartments = () => {
       promptUser();
     });
   };
-  
+  //function viewAllRoles
+const viewAllRoles = () => {
+    let query = "SELECT * FROM role";
+    db.query(query,(err, data) => {
+      if (err) throw err;
+      console.table(data);
+      promptUser();
+    });
+  };
