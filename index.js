@@ -1,4 +1,4 @@
-const inquirer = require("inquirer");
+const inquirer = require ("inquirer");
 // import connection
 const db = require("./config/connection");
 
