@@ -45,3 +45,13 @@ const prompUser = () => {
             }
         });
 };
+// view all departments
+const viewAllDepartments = () => {
+    let query = "SELECT * FROM department";
+    db.query(query,(err, data) => {
+      if (err) throw err;
+      console.table(data);
+      promptUser();
+    });
+  };
+  
