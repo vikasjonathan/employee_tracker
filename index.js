@@ -20,7 +20,7 @@ const prompUser = () => {
         ],
     },
     ])
-    // added condition as per choice calling the respective functions
+        // added condition as per choice calling the respective functions
         .then((answers) => {
             const { choices } = answers;
             console.log(choices);
@@ -48,18 +48,27 @@ const prompUser = () => {
 // view all departments
 const viewAllDepartments = () => {
     let query = "SELECT * FROM department";
-    db.query(query,(err, data) => {
-      if (err) throw err;
-      console.table(data);
-      promptUser();
+    db.query(query, (err, data) => {
+        if (err) throw err;
+        console.table(data);
+        promptUser();
     });
-  };
-  //function viewAllRoles
+};
+//function viewAllRoles
 const viewAllRoles = () => {
     let query = "SELECT * FROM role";
-    db.query(query,(err, data) => {
-      if (err) throw err;
-      console.table(data);
-      promptUser();
+    db.query(query, (err, data) => {
+        if (err) throw err;
+        console.table(data);
+        promptUser();
     });
-  };
+};
+// function to view employees
+const viewAllEmployees = () => {
+    let query = "SELECT * FROM employee";
+    db.query(query, (err, data) => {
+        if (err) throw err;
+        console.table(data);
+        promptUser();
+    });
+};
